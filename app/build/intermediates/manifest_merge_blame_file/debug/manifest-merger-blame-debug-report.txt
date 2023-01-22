@@ -22,7 +22,7 @@
 15-->[androidx.core:core:1.9.0] C:\Users\Mo\.gradle\caches\transforms-3\9811bf6e0ea8002748e1a5d1e9eb40bd\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:5:5-28:19
+17-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:5:5-42:19
 18        android:allowBackup="true"
 18-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -41,54 +41,81 @@
 26-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:11:9-54
 27        android:supportsRtl="true"
 27-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:12:9-35
-28        android:theme="@style/Theme.Frontend" >
-28-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:13:9-46
-29        <activity
-29-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:15:9-27:20
-30            android:name="com.example.frontend.MainActivity"
-30-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:16:13-41
-31            android:exported="true" >
-31-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:17:13-36
-32            <intent-filter>
-32-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:18:13-22:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:19:17-69
-33-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:19:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:21:17-77
-35-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:21:27-74
-36            </intent-filter>
-37
-38            <meta-data
-38-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:24:13-26:36
-39                android:name="android.app.lib_name"
-39-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:25:17-52
-40                android:value="" />
-40-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:26:17-33
-41        </activity>
-42
-43        <provider
-43-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-44            android:name="androidx.startup.InitializationProvider"
-44-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-45            android:authorities="com.example.frontend.androidx-startup"
-45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-46            android:exported="false" >
-46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-47            <meta-data
-47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-48                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-49                android:value="androidx.startup" />
-49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-50            <meta-data
-50-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Mo\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-51                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-51-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Mo\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-52                android:value="androidx.startup" />
-52-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Mo\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-53        </provider>
-54    </application>
-55
-56</manifest>
+28        android:testOnly="true"
+29        android:theme="@style/Theme.Frontend" >
+29-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:13:9-46
+30        <activity
+30-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:15:9-21:20
+31            android:name="com.example.frontend.Mainpage"
+31-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:16:13-37
+32            android:exported="false" >
+32-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:17:13-37
+33            <meta-data
+33-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:18:13-20:36
+34                android:name="android.app.lib_name"
+34-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:19:17-52
+35                android:value="" />
+35-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:20:17-33
+36        </activity>
+37        <activity
+37-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:22:9-28:20
+38            android:name="com.example.frontend.Login"
+38-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:23:13-34
+39            android:exported="false" >
+39-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:24:13-37
+40            <meta-data
+40-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:18:13-20:36
+41                android:name="android.app.lib_name"
+41-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:19:17-52
+42                android:value="" />
+42-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:20:17-33
+43        </activity>
+44        <activity
+44-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:29:9-41:20
+45            android:name="com.example.frontend.MainActivity"
+45-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:30:13-41
+46            android:exported="true" >
+46-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:31:13-36
+47            <intent-filter>
+47-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:32:13-36:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:33:17-69
+48-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:33:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:35:17-77
+50-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:35:27-74
+51            </intent-filter>
+52
+53            <meta-data
+53-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:18:13-20:36
+54                android:name="android.app.lib_name"
+54-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:19:17-52
+55                android:value="" />
+55-->D:\workspace\gongda\app\src\main\AndroidManifest.xml:20:17-33
+56        </activity>
+57
+58        <provider
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+60            android:authorities="com.example.frontend.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mo\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Mo\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Mo\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Mo\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+68        </provider>
+69    </application>
+70
+71</manifest>
