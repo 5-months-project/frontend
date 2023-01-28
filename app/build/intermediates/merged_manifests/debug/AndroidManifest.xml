@@ -28,7 +28,21 @@
         android:testOnly="true"
         android:theme="@style/Theme.Frontend" >
         <activity
-            android:name="com.example.frontend.Mainpage"
+            android:name="com.example.frontend.Profile"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.frontend.Group"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.frontend.Calendar.Mainpage"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"

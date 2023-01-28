@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mainpage">
+    tools:context=".Calendar.Mainpage">
 
     <TextView
         android:id="@+id/txt_year"
@@ -16,8 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05">
-
+        app:layout_constraintVertical_bias="0.03"
+        >
     </TextView>
 
     <TextView
@@ -25,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Juary"
+        android:textColor="#BDADA6"
         android:textSize="20sp"
         android:fontFamily="@font/cambria"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,7 @@
             android:weightSum="7">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -55,7 +56,7 @@
                 android:text=" Sun"></TextView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -63,7 +64,7 @@
                 android:text="Mon"></TextView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -71,7 +72,7 @@
                 android:text="Tue"></TextView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -79,7 +80,7 @@
                 android:text="Wed"></TextView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -87,7 +88,7 @@
                 android:text="Thu"></TextView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -95,405 +96,878 @@
                 android:text="Fri"></TextView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:fontFamily="@font/cambria"
                 android:text="Sat"></TextView>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:weightSum="7">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
+            <FrameLayout
+                android:id="@+id/viewgroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+                <FrameLayout
+                    android:id="@+id/case_1"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@color/light_beige"
+                    >
+                    <TextView
+                        android:id="@+id/cal_txt_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:fontFamily="@font/cambria"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </TextView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_2"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    >
+                    <TextView
+                        android:id="@+id/cal_txt_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_3"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="116dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:id="@+id/cal_txt_3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_4"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="173dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
+                    android:id="@+id/case_5"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_6"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="287dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_7"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="344dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
+                <TextView
+                    android:id="@+id/progress_1_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+                <TextView
+                    android:id="@+id/progress_1_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/progress_today"
+                    android:layout_marginLeft="2dp"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    />
+                <TextView
+                    android:id="@+id/progress_1_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/progress_today"
+                    android:layout_marginLeft="2dp"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    />
+                <TextView
+                    android:id="@+id/progress_1_4"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="65dp"
+                    android:background="@drawable/progress_today"
+                    android:layout_marginLeft="2dp"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    />
+                <TextView
+                    android:id="@+id/progress_1_5"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:background="@drawable/progress_today"
+                    android:layout_marginLeft="2dp"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/viewgroup2"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <FrameLayout
+                    android:id="@+id/case_8"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:fontFamily="@font/cambria"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_9"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_10"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="116dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:id="@+id/cal_txt_10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_11"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="173dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_12"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_13"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="287dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_14"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="344dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
+            <FrameLayout
+                android:id="@+id/viewgroup3"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="7"
+                >
+                <FrameLayout
+                    android:id="@+id/case_15"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:fontFamily="@font/cambria"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_16"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_17"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="116dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:id="@+id/cal_txt_17"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_18"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="173dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_19"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_20"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="287dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_21"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="344dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/viewgroup4"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="7"
+                >
+                <FrameLayout
+                    android:id="@+id/case_22"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:fontFamily="@font/cambria"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_23"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_24"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="116dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:id="@+id/cal_txt_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_25"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="173dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_26"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_27"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="287dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_28"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="344dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/viewgroup5"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="7"
+                >
+                <FrameLayout
+                    android:id="@+id/case_29"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:fontFamily="@font/cambria"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_30"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_31"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="116dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:id="@+id/cal_txt_31"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_32"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="173dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_33"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_34"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="287dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_35"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="344dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/viewgroup6"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="7"
+                android:visibility="visible"
+                >
+                <FrameLayout
+                    android:id="@+id/case_36"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/cal_txt_36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:fontFamily="@font/cambria"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_37"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_38"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="116dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:id="@+id/cal_txt_38"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_39"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="173dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_40"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_41"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="287dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/case_42"
+                    android:layout_width="55dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="344dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_beige"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/cal_txt_42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
+
+
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="127dp"
-            android:weightSum="7">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="127dp"
-            android:weightSum="7">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="229dp"
-            android:weightSum="7">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="331dp"
-            android:weightSum="7">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="433dp"
-            android:weightSum="7">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginLeft="2dp"
-                android:layout_weight="1"
-                android:background="@color/light_beige"
-                android:gravity="center"></TextView>
-
-        </LinearLayout>
     </FrameLayout>
 
 
 
-    <TextView
-
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/calendar_fix_right"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/calendar_btn_write"
+            android:gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:text="write"
+            ></TextView>
+        <TextView
+            android:id="@+id/calendar_btn_group"
+            android:gravity="center"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:text="group"
+            ></TextView>
+        <TextView
+        android:id="@+id/calendar_btn_calendar"
+        android:gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:text="calendar"
+        ></TextView>
+        <TextView
+        android:id="@+id/calendar_btn_profile"
+        android:gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:text="profile"
+        ></TextView>
+        <TextView
+        android:id="@+id/calendar_btn_settings"
+        android:gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:text="settings"
+        ></TextView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
