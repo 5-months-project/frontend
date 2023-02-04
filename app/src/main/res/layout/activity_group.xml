@@ -65,7 +65,7 @@
                 android:text="Create"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/btn_join"
@@ -77,19 +77,19 @@
                 android:text="Join"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="2dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="@color/white"></View>
+                android:background="@color/white" />
 
 
         </FrameLayout>
 
         <TextView
-            android:id="@+id/btn_schedule"
+            android:id="@+id/btn_schedule_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -104,50 +104,92 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/group_side_menu"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="@color/sidemenu_background"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        android:orientation="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/group_btn_settings"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:text="설정 아이콘"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/group_btn_close"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:text="닫기 아이콘"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                ></TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <TextView
-            android:id="@+id/group_btn_write"
-            android:gravity="center"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="10dp"
-            android:text="write"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="공다 아이콘"
+            android:layout_gravity="center"
             ></TextView>
         <TextView
-            android:id="@+id/group_btn_group"
+            android:id="@+id/group_sidemenu_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GONGDA@GAMIL.COM"
+            android:layout_gravity="center"
+            ></TextView>
+        <TextView
+            android:id="@+id/group_sidemenu_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="10dp"
-            android:text="group"
-            ></TextView><TextView
-        android:id="@+id/group_btn_calendar"
-        android:gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="10dp"
-        android:text="calendar"
-        ></TextView><TextView
-        android:id="@+id/group_btn_profile"
-        android:gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="10dp"
-        android:text="profile"
-        ></TextView><TextView
-        android:id="@+id/group_btn_settings"
-        android:gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="10dp"
-        android:text="settings"
-        ></TextView>
+            ></TextView>
+
+        <TextView
+            android:id="@+id/group_btn_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="PLAN"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/group_btn_group"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="UNION"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="DIARY"
+            ></TextView>
+
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -41,9 +42,6 @@ public class Mainpage extends AppCompatActivity {
     public static int[] inttmp  = new int[2];
     Animation to_left_animation;
     Animation to_right_animation;
-
-
-
     List<CalendarModel> result = new ArrayList<>();
 
     @Override
@@ -116,12 +114,19 @@ public class Mainpage extends AppCompatActivity {
         String[] date = tmp.split("-");
         Calendar start = Calendar.getInstance();
         Calendar end = Calendar.getInstance();
+        Calendar end_last = Calendar.getInstance();
+        Calendar start_next = Calendar.getInstance();
+        end_last.set(Integer.parseInt(date[0]),Integer.parseInt(date[1])-1,1);
+        end_last.add(Calendar.DATE,-1);
         start.set(Integer.parseInt(date[0]),Integer.parseInt(date[1])-1,1);
         end.set(Integer.parseInt(date[0]),Integer.parseInt(date[1]),1);
         end.add(Calendar.DATE,-1);
+        start_next.set(Integer.parseInt(date[0]),Integer.parseInt(date[1]),1);
         int Start_day = start.get(Calendar.DAY_OF_WEEK);
+        int Start_day_next = start_next.get(Calendar.DAY_OF_WEEK);
         int End_day = end.get(Calendar.DATE);
-        setdate(Start_day,End_day);
+        int End_day_last = end_last.get(Calendar.DATE);
+        setdate(Start_day,End_day,Start_day_next,End_day_last);
 
 
 
@@ -249,7 +254,7 @@ public class Mainpage extends AppCompatActivity {
         return Math.round((float) dp * density);
 
     }
-    public void setdate(int start, int end)//달력 날짜 설정해주는 함수
+    public void setdate(int start, int end,int Start_day_next,int End_day_last)//달력 날짜 설정해주는 함수
     {
 
         dt[0] = findViewById(R.id.cal_txt_1);
@@ -301,14 +306,28 @@ public class Mainpage extends AppCompatActivity {
             dt[i].setText("");
         }
         int k = 1;
-        for(int i = 1 ; i < start+end ; i++)
+        int p = 1;
+        int c = 0;
+        for(int i = 1 ; i < 42 ; i++)
         {
-            if(i>=start)
+            if(start<=i&&i<start+end)
             {
                 dt[i-1].setText(""+k); k++;
             }
+            else if(i>=start+end){
+                //텍스트 컬러 변경하기
+                dt[i-1].setText(""+p);
+                p++;
+            }
+            else if(i<start)
+            {
+                //텍스트 컬러 변경하기
+                dt[i-1].setText(""+(End_day_last-start+c+2));
+                c++;
+
+            }
         }
-        if(dt[35].getText() == "")
+        if(start+end<=35)
         {
             layout6.setVisibility(View.GONE);
         }

@@ -20,10 +20,6 @@
         "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\item_group_edge.xml"
     },
     {
-        "merged": "com.example.frontend.app-merged_res-31:/layout_dialog_calendar.xml.flat",
-        "source": "com.example.frontend.app-main-33:/layout/dialog_calendar.xml"
-    },
-    {
         "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\xml\\backup_rules.xml"
     },
@@ -46,6 +42,10 @@
     {
         "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_dialog_join.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\dialog_join.xml"
     },
     {
         "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\font_font.xml.flat",
@@ -74,6 +74,14 @@
     {
         "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_dialog_btn.xml.flat",
         "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\dialog_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_dialog_create.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\dialog_create.xml"
+    },
+    {
+        "merged": "com.example.frontend.app-merged_res-31:/layout_dialog_create.xml.flat",
+        "source": "com.example.frontend.app-main-33:/layout/dialog_create.xml"
     },
     {
         "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_create_join.xml.flat",
@@ -186,6 +194,10 @@
     {
         "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.frontend.app-merged_res-31:/layout_activity_group.xml.flat",
+        "source": "com.example.frontend.app-main-33:/layout/activity_group.xml"
     },
     {
         "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable-v24_plusbtn.png.flat",
