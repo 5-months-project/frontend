@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="300dp"
+    android:background="@drawable/round_edge_login"
+    android:id="@+id/layout_dialog_login"
+
+    >
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공다 아이콘"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <EditText
+        android:id="@+id/dialog_id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="아이디"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <EditText
+        android:id="@+id/dialog_pw"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="패스워드"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_id" />
+
+    <CheckBox
+        android:id="@+id/dialog_checkbox_idsave"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="아이디 저장"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_pw"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/dialog_checkbox_keeplogin"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="로그인 상태 유지"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_pw"></CheckBox>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="200dp" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:background="@drawable/dialog_btn"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_checkbox_idsave"
+        app:layout_constraintVertical_bias="0.3"></TextView>
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:background="@drawable/dialog_btn"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_checkbox_keeplogin"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintVertical_bias="0.3"
+        ></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,8 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="600dp"
     android:background="@drawable/item_group_edge">
+
+    <TextView
+        android:id="@+id/dialog_cal_exit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="x"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"/>
 
     <TextView
         android:id="@+id/dialog_date"
@@ -26,14 +38,13 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/dialog_date"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067"
-        app:layout_constraintHorizontal_bias="0.05"/>
+        app:layout_constraintVertical_bias="0.067" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_schedule"
-        tools:listitem="@layout/item_schedule"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,6 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dialog_date"
         app:layout_constraintVertical_bias="0.05"
+        tools:listitem="@layout/item_schedule"
 
         />
 

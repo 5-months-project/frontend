@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.frontend.Calendar.Mainpage;
+import com.example.frontend.Group.Group;
 
 public class Profile extends AppCompatActivity {
 

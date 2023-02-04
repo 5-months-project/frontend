@@ -1,170 +1,206 @@
 [
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\font_heiroflightbold.ttf.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\font\\heiroflightbold.ttf"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_round_edge.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\round_edge.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_edge_profile.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\edge_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_item_group_edge.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\item_group_edge.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_item_group_bottonedge.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\item_group_bottonedge.xml"
+        "merged": "com.example.frontend.app-merged_res-31:/layout_dialog_calendar.xml.flat",
+        "source": "com.example.frontend.app-main-33:/layout/dialog_calendar.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_progress_today.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\progress_today.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_plusbtn_right.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\plusbtn_right.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_create_join.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\create_join.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable-v24_calendar_fix.png.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable-v24\\calendar_fix.png"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_plusbtn_right.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\plusbtn_right.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_item_group.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\item_group.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_activity_group.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\activity_group.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_item_group_edge.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\item_group_edge.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\font_font.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\font\\font.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_calendar_fix_right.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\calendar_fix_right.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_circle_edge.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\circle_edge.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable-v24_calendar_fix.png.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable-v24\\calendar_fix.png"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_group_list.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\group_list.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_activity_profile.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\activity_profile.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\font_heiroflightregular.ttf.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\font\\heiroflightregular.ttf"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_item_schedule.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\item_schedule.xml"
     },
     {
-        "merged": "com.example.frontend.app-merged_res-29:/layout_dialog.xml.flat",
-        "source": "com.example.frontend.app-main-31:/layout/dialog.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_dialog_calendar.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\dialog_calendar.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_dialog_btn.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\dialog_btn.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_create_join.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\create_join.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_round_edge_login.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\round_edge_login.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_circle_edge.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\circle_edge.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\font_font_cambria.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\font\\font_cambria.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_dialog.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\dialog.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_progress_start.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\progress_start.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\font_heiroflightregular.ttf.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\font\\heiroflightregular.ttf"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\font_cambria.ttf.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\font\\cambria.ttf"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\anim_anim_to_left.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\anim\\anim_to_left.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_item_calendar_viewpager.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\item_calendar_viewpager.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\font_font.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\font\\font.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_item_group_bottonedge.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\item_group_bottonedge.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_activity_mainpage.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\activity_mainpage.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_item_schedule.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\item_schedule.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_progress_start.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\progress_start.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_rec_edge.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\rec_edge.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable_edge_profile.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable\\edge_profile.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_activity_mainpage.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\activity_mainpage.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_calendar_fix_right.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\calendar_fix_right.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\font_heiroflightbold.ttf.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\font\\heiroflightbold.ttf"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_group_list.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\group_list.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_activity_group.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\activity_group.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\drawable-v24_plusbtn.png.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\drawable-v24\\plusbtn.png"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_dialog.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-29:\\font_font_cambria.xml.flat",
-        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-31:\\font\\font_cambria.xml"
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_progress_today.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\progress_today.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\anim_anim_to_right.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\anim\\anim_to_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\layout_dialog_login.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\layout\\dialog_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable-v24_plusbtn.png.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable-v24\\plusbtn.png"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\font_cambria.ttf.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\font\\cambria.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-merged_res-31:\\drawable_round_edge.xml.flat",
+        "source": "C:\\Users\\Mo\\.gradle\\daemon\\7.4\\com.example.frontend.app-main-33:\\drawable\\round_edge.xml"
     }
 ]

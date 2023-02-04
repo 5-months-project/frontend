@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="31"
-        android:targetSdkVersion="32" />
+        android:targetSdkVersion="33" />
 
     <permission
         android:name="com.example.frontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -35,7 +35,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.frontend.Group"
+            android:name="com.example.frontend.Group.Group"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"

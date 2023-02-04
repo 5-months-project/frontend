@@ -21,6 +21,15 @@
     </TextView>
 
     <TextView
+        android:id="@+id/btn_side_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="사이드 메뉴 버튼"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,14 +41,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_year" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_calendar"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </LinearLayout>
+
+
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.9">
 
         <LinearLayout
 
@@ -51,99 +83,94 @@
                 android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="@font/cambria"
+                android:gravity="center"
                 android:text=" Sun"></TextView>
 
             <TextView
                 android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="@font/cambria"
+                android:gravity="center"
                 android:text="Mon"></TextView>
 
             <TextView
                 android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="@font/cambria"
+                android:gravity="center"
                 android:text="Tue"></TextView>
 
             <TextView
                 android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="@font/cambria"
+                android:gravity="center"
                 android:text="Wed"></TextView>
 
             <TextView
                 android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="@font/cambria"
+                android:gravity="center"
                 android:text="Thu"></TextView>
 
             <TextView
                 android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="@font/cambria"
+                android:gravity="center"
                 android:text="Fri"></TextView>
 
             <TextView
                 android:layout_width="23dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="@font/cambria"
+                android:gravity="center"
                 android:text="Sat"></TextView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <FrameLayout
                 android:id="@+id/viewgroup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                >
+                android:layout_marginTop="20dp">
+
                 <FrameLayout
                     android:id="@+id/case_1"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="2dp"
-                    android:background="@color/light_beige"
-                    >
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
                     <TextView
                         android:id="@+id/cal_txt_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:fontFamily="@font/cambria"
+                        android:text="1"
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-                    </TextView>
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_2"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="59dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    >
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
                     <TextView
                         android:id="@+id/cal_txt_2"
                         android:layout_width="wrap_content"
@@ -152,30 +179,26 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_3"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="116dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
                     <TextView
+                        android:id="@+id/cal_txt_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:id="@+id/cal_txt_3"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_4"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="173dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
                     <TextView
                         android:id="@+id/cal_txt_4"
                         android:layout_width="wrap_content"
@@ -184,15 +207,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
-                <FrameLayout
 
+                <FrameLayout
                     android:id="@+id/case_5"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
                     <TextView
                         android:id="@+id/cal_txt_5"
                         android:layout_width="wrap_content"
@@ -201,14 +221,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_6"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="287dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
                     <TextView
                         android:id="@+id/cal_txt_6"
                         android:layout_width="wrap_content"
@@ -217,14 +235,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_7"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="344dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
                     <TextView
                         android:id="@+id/cal_txt_7"
                         android:layout_width="wrap_content"
@@ -236,93 +252,56 @@
 
                 <TextView
                     android:id="@+id/progress_1_1"
-                    android:layout_width="55dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/progress_today"
                     android:text="프로젝트 회의"
-                    android:layout_marginLeft="2dp"
                     android:textColor="@color/white"
                     android:textSize="9sp" />
+
                 <TextView
                     android:id="@+id/progress_1_2"
                     android:layout_width="55dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
                     android:layout_marginTop="35dp"
                     android:background="@drawable/progress_today"
-                    android:layout_marginLeft="2dp"
                     android:text="프로젝트 회의"
                     android:textColor="@color/white"
-                    android:textSize="9sp"
-                    />
-                <TextView
-                    android:id="@+id/progress_1_3"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:background="@drawable/progress_today"
-                    android:layout_marginLeft="2dp"
-                    android:text="프로젝트 회의"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    />
-                <TextView
-                    android:id="@+id/progress_1_4"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="65dp"
-                    android:background="@drawable/progress_today"
-                    android:layout_marginLeft="2dp"
-                    android:text="프로젝트 회의"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    />
-                <TextView
-                    android:id="@+id/progress_1_5"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/progress_today"
-                    android:layout_marginLeft="2dp"
-                    android:text="프로젝트 회의"
-                    android:textColor="@color/white"
-                    android:textSize="9sp"
-                    />
+                    android:textSize="9sp" />
             </FrameLayout>
+
             <FrameLayout
                 android:id="@+id/viewgroup2"
-                android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:layout_marginTop="2dp">
+
                 <FrameLayout
                     android:id="@+id/case_8"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
                     <TextView
                         android:id="@+id/cal_txt_8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:fontFamily="@font/cambria"
+                        android:text="1"
                         android:textColor="@color/white"
                         android:textStyle="bold"
 
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_9"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="59dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
                     <TextView
                         android:id="@+id/cal_txt_9"
                         android:layout_width="wrap_content"
@@ -331,30 +310,26 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_10"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="116dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
                     <TextView
+                        android:id="@+id/cal_txt_10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:id="@+id/cal_txt_10"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_11"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="173dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
                     <TextView
                         android:id="@+id/cal_txt_11"
                         android:layout_width="wrap_content"
@@ -363,14 +338,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_12"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
                     <TextView
                         android:id="@+id/cal_txt_12"
                         android:layout_width="wrap_content"
@@ -379,14 +352,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_13"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="287dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
                     <TextView
                         android:id="@+id/cal_txt_13"
                         android:layout_width="wrap_content"
@@ -395,14 +366,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_14"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="344dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
                     <TextView
                         android:id="@+id/cal_txt_14"
                         android:layout_width="wrap_content"
@@ -415,39 +384,34 @@
 
             <FrameLayout
                 android:id="@+id/viewgroup3"
-                android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="7"
-                >
+                android:layout_marginTop="2dp"
+                android:weightSum="7">
+
                 <FrameLayout
                     android:id="@+id/case_15"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
                     <TextView
                         android:id="@+id/cal_txt_15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:fontFamily="@font/cambria"
+                        android:text="1"
                         android:textColor="@color/white"
                         android:textStyle="bold"
 
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_16"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="59dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
                     <TextView
                         android:id="@+id/cal_txt_16"
                         android:layout_width="wrap_content"
@@ -456,30 +420,27 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_17"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="116dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
                     <TextView
+                        android:id="@+id/cal_txt_17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity=""
                         android:text="1"
-                        android:id="@+id/cal_txt_17"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_18"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="173dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
                     <TextView
                         android:id="@+id/cal_txt_18"
                         android:layout_width="wrap_content"
@@ -488,14 +449,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_19"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
                     <TextView
                         android:id="@+id/cal_txt_19"
                         android:layout_width="wrap_content"
@@ -504,14 +463,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_20"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="287dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
                     <TextView
                         android:id="@+id/cal_txt_20"
                         android:layout_width="wrap_content"
@@ -520,14 +477,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_21"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="344dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
                     <TextView
                         android:id="@+id/cal_txt_21"
                         android:layout_width="wrap_content"
@@ -537,41 +492,37 @@
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
             </FrameLayout>
+
             <FrameLayout
                 android:id="@+id/viewgroup4"
-                android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="7"
-                >
+                android:layout_marginTop="2dp"
+                android:weightSum="7">
+
                 <FrameLayout
                     android:id="@+id/case_22"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
                     <TextView
                         android:id="@+id/cal_txt_22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:fontFamily="@font/cambria"
+                        android:text="1"
                         android:textColor="@color/white"
                         android:textStyle="bold"
 
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_23"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="59dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
                     <TextView
                         android:id="@+id/cal_txt_23"
                         android:layout_width="wrap_content"
@@ -580,30 +531,26 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_24"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="116dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
                     <TextView
+                        android:id="@+id/cal_txt_24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:id="@+id/cal_txt_24"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_25"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="173dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
                     <TextView
                         android:id="@+id/cal_txt_25"
                         android:layout_width="wrap_content"
@@ -612,14 +559,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_26"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
                     <TextView
                         android:id="@+id/cal_txt_26"
                         android:layout_width="wrap_content"
@@ -628,14 +573,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_27"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="287dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
                     <TextView
                         android:id="@+id/cal_txt_27"
                         android:layout_width="wrap_content"
@@ -644,14 +587,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_28"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="344dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
                     <TextView
                         android:id="@+id/cal_txt_28"
                         android:layout_width="wrap_content"
@@ -664,39 +605,34 @@
 
             <FrameLayout
                 android:id="@+id/viewgroup5"
-                android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="7"
-                >
+                android:layout_marginTop="2dp"
+                android:weightSum="7">
+
                 <FrameLayout
                     android:id="@+id/case_29"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
                     <TextView
                         android:id="@+id/cal_txt_29"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:fontFamily="@font/cambria"
+                        android:text="1"
                         android:textColor="@color/white"
                         android:textStyle="bold"
 
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_30"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="59dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
                     <TextView
                         android:id="@+id/cal_txt_30"
                         android:layout_width="wrap_content"
@@ -705,30 +641,26 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_31"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="116dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="116dp">
+
                     <TextView
+                        android:id="@+id/cal_txt_31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:id="@+id/cal_txt_31"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_32"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="173dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
                     <TextView
                         android:id="@+id/cal_txt_32"
                         android:layout_width="wrap_content"
@@ -737,14 +669,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_33"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
                     <TextView
                         android:id="@+id/cal_txt_33"
                         android:layout_width="wrap_content"
@@ -753,14 +683,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_34"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="287dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
                     <TextView
                         android:id="@+id/cal_txt_34"
                         android:layout_width="wrap_content"
@@ -769,14 +697,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_35"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="344dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
                     <TextView
                         android:id="@+id/cal_txt_35"
                         android:layout_width="wrap_content"
@@ -786,43 +712,38 @@
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
             </FrameLayout>
+
             <FrameLayout
                 android:id="@+id/viewgroup6"
-                android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="7"
+                android:layout_marginTop="2dp"
                 android:visibility="visible"
-                >
+                android:weightSum="7">
+
                 <FrameLayout
                     android:id="@+id/case_36"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center"
-                    >
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
                     <TextView
                         android:id="@+id/cal_txt_36"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
                         android:fontFamily="@font/cambria"
+                        android:text="1"
                         android:textColor="@color/white"
                         android:textStyle="bold"
 
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_37"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="59dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
                     <TextView
                         android:id="@+id/cal_txt_37"
                         android:layout_width="wrap_content"
@@ -831,30 +752,26 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_38"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="116dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginStart="116dp">
+
                     <TextView
+                        android:id="@+id/cal_txt_38"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:id="@+id/cal_txt_38"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_39"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="173dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
                     <TextView
                         android:id="@+id/cal_txt_39"
                         android:layout_width="wrap_content"
@@ -863,14 +780,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_40"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
                     <TextView
                         android:id="@+id/cal_txt_40"
                         android:layout_width="wrap_content"
@@ -879,14 +794,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_41"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="287dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
                     <TextView
                         android:id="@+id/cal_txt_41"
                         android:layout_width="wrap_content"
@@ -895,14 +808,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
+
                 <FrameLayout
                     android:id="@+id/case_42"
-                    android:layout_width="55dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="344dp"
-                    android:layout_weight="1"
-                    android:background="@color/light_beige"
-                    android:gravity="center">
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
                     <TextView
                         android:id="@+id/cal_txt_42"
                         android:layout_width="wrap_content"
@@ -914,60 +825,96 @@
             </FrameLayout>
 
 
-
         </LinearLayout>
 
 
     </FrameLayout>
-
-
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/side_menu"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="@color/sidemenu_background"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        android:orientation="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/calendar_btn_settings"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:text="설정 아이콘"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/calendar_btn_close"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:text="닫기 아이콘"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                ></TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <TextView
-            android:id="@+id/calendar_btn_write"
-            android:gravity="center"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="10dp"
-            android:text="write"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="공다 아이콘"
+            android:layout_gravity="center"
             ></TextView>
+        <TextView
+            android:id="@+id/calendar_sidemenu_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GONGDA@GAMIL.COM"
+            android:layout_gravity="center"
+            ></TextView>
+        <TextView
+            android:id="@+id/calendar_sidemenu_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:layout_gravity="center"
+            android:gravity="center"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/calendar_btn_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="PLAN"
+            >
+        </TextView>
+
         <TextView
             android:id="@+id/calendar_btn_group"
-            android:gravity="center"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="10dp"
-            android:text="group"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="UNION"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="DIARY"
             ></TextView>
-        <TextView
-        android:id="@+id/calendar_btn_calendar"
-        android:gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="10dp"
-        android:text="calendar"
-        ></TextView>
-        <TextView
-        android:id="@+id/calendar_btn_profile"
-        android:gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="10dp"
-        android:text="profile"
-        ></TextView>
-        <TextView
-        android:id="@+id/calendar_btn_settings"
-        android:gravity="center"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="10dp"
-        android:text="settings"
-        ></TextView>
+
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

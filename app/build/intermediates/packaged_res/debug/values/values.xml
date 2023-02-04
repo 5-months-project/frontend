@@ -6,6 +6,7 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="sidemenu_background">#F1ECE1</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
@@ -23,5 +24,12 @@
         
         <item name="android:statusBarColor">@color/white</item>
         
+    </style>
+    <style name="calendarcell" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/light_beige</item>
+        <item name="android:gravity">center</item>
     </style>
 </resources>

@@ -1,53 +1,108 @@
 package com.example.frontend.Calendar;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.frontend.Group;
+import com.example.frontend.Group.Group;
 import com.example.frontend.Profile;
 import com.example.frontend.R;
 
-import org.w3c.dom.Text;
-
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Mainpage extends AppCompatActivity {
 
 
     LocalDate yeardate;
+    RecyclerView.Adapter adapter;
+    //RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
     public static TextView dt[] = new TextView[42];
     public static FrameLayout btn_dt[] = new FrameLayout[42];
     public static int[] inttmp  = new int[2];
+    Animation to_left_animation;
+    Animation to_right_animation;
 
+
+
+    List<CalendarModel> result = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
+        final boolean[] status_menu = {false};
+        to_left_animation = AnimationUtils.loadAnimation(this,R.anim.anim_to_left);
+        to_right_animation = AnimationUtils.loadAnimation(this,R.anim.anim_to_right);
+
+
+        SlidingAnimationListener animationListener = new SlidingAnimationListener();
+        to_left_animation.setAnimationListener(animationListener);
+        to_right_animation.setAnimationListener(animationListener);
+        LinearLayout sidemenu = findViewById(R.id.side_menu);
+
+        //서버에 viewpager에 들어갈 데이터를 넣어주면 됨
+        String[] samp = new String[]{"1번", "2번", "3번", "4번", "5번","6번",""};
+        ViewPager2 calviewpager = findViewById(R.id.viewpager_calendar);
+        calviewpager.setAdapter(new PagerAdapter(samp));
+        calviewpager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
 
 
 
-        TextView profilebtn = findViewById(R.id.calendar_btn_profile);
-        profilebtn.setOnClickListener(new View.OnClickListener() {
+        TextView btn_sidemenu_open = findViewById(R.id.btn_side_menu);
+        btn_sidemenu_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Mainpage.this, Profile.class);
-                startActivity(i);
+                if (!status_menu[0])
+                {
+                    sidemenu.setVisibility(View.VISIBLE);
+                    sidemenu.startAnimation(to_right_animation);
+                    status_menu[0] = true;
+
+                }
             }
-        });//페이지 넘기는 코드(to profile)
+        });//사이드 메뉴 오픈 버튼
+        TextView btn_sidemenu_close = findViewById(R.id.calendar_btn_close);
+        btn_sidemenu_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(status_menu[0])
+                {
+                    sidemenu.setVisibility(View.GONE);
+                    sidemenu.startAnimation(to_left_animation);
+                    status_menu[0] = false;
+                }
+            }
+        });//사이드 메뉴 종료 버튼
+        TextView btn_logout = findViewById(R.id.calendar_sidemenu_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //로그아웃을 처리하고 로그인 창을 띄워준다
+                dialog_login();
+            }
+        });//사이드 메뉴 로그아웃 버튼
+
+
         TextView groupbtn = findViewById(R.id.calendar_btn_group);
         groupbtn.setOnClickListener(v -> {
             Intent i = new Intent(Mainpage.this, Group.class);
@@ -116,28 +171,46 @@ public class Mainpage extends AppCompatActivity {
         btn_dt[41] = findViewById(R.id.case_42);
 
 
-        for(int i = 0 ; i < 42 ; i ++)
+        for(int i = 0 ; i < 42 ; i ++)//각 case칸에 다이얼로그 클릭 리스너를 할당
         {
             btn_dt[i].setTag(i);
             btn_dt[i].setOnClickListener(dialogclicklistener);
         }
     }
 
-    private final View.OnClickListener dialogclicklistener = new View.OnClickListener() {
+    private final View.OnClickListener dialogclicklistener = new View.OnClickListener() {//누르면 다이얼로그 창이 뜨게끔 하는 클릭 리스너
         @Override
         public void onClick(View v) {
             int t = (int)v.getTag();//t는 몇번째 칸인지 표시 -> 요일 계산
-            dialog(t, Integer.parseInt((String) dt[t].getText()));//dt에는 cal_txt가 들어가있고 여기엔 그날이 몇일인지 표시
+            dialog_calendar(t, Integer.parseInt((String) dt[t].getText()));//dt에는 cal_txt가 들어가있고 여기엔 그날이 몇일인지 표시
         }
     };
-    public void dialog(int day, int date)
+    public void dialog_login()//로그인 다이얼로그
     {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.dialog_login);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        params.width = dptopx(this,400);
+        params.height = dptopx(this,300);
+        dialog.getWindow().setAttributes(params);
+        dialog.show();
 
-        View dialogView = getLayoutInflater().inflate(R.layout.dialog,null);
-        WindowManager.LayoutParams params = new WindowManager.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,dptopx(this,400));
-        dialogView.setLayoutParams(params);
-        final TextView dialogdate = dialogView.findViewById(R.id.dialog_date);
-        final TextView dialogday = dialogView.findViewById(R.id.dialog_day);
+    }
+    public void dialog_calendar(int day, int date)//캘린더 다이얼로그 창
+    {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.dialog_calendar);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        params.width = (ViewGroup.LayoutParams.MATCH_PARENT);
+        params.height = dptopx(this,600);
+        dialog.getWindow().setAttributes(params);
+        final TextView dialogdate = dialog.findViewById(R.id.dialog_date);
+        final TextView dialogday = dialog.findViewById(R.id.dialog_day);
+        final TextView dialogexit = dialog.findViewById(R.id.dialog_cal_exit);
         dialogdate.setText(String.valueOf(date));
         if(day==0||day==7||day==14||day==21||day==28||day==35) dialogday.setText("Sunday");
         else if(day==1||day==8||day==15||day==22||day==29||day==36) dialogday.setText("Monday");
@@ -146,12 +219,31 @@ public class Mainpage extends AppCompatActivity {
         else if(day==4||day==11||day==18||day==25||day==32||day==39) dialogday.setText("Thursday");
         else if(day==5||day==12||day==19||day==26||day==33||day==40) dialogday.setText("Friday");
         else if(day==6||day==13||day==20||day==27||day==34||day==41) dialogday.setText("Saturday");
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(dialogView);
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+        dialog.show();
+        //리사이클러 뷰 어댑터 설정
+        String[][] sample = new String[2][2];//서버와 통신하게 되면 캘린더 모델로 전달
+        sample[0][0] = "프로젝트 회의";
+        sample[0][1] = "2월 4일 22:00 회의 진행";
+        sample[1][0] = "프로젝트 발표";
+        sample[1][1] = "2월 12일 일요일 발표";
+
+        RecyclerView recyclerView = dialog.findViewById(R.id.recyclerview_schedule);
+        recyclerView.setLayoutManager(new RecyclerView.LayoutManager() {
+            @Override
+            public RecyclerView.LayoutParams generateDefaultLayoutParams() {
+                return null;
+            }
+        });
+        adapter =new CalendarAdapter(sample);
+        recyclerView.setAdapter(adapter);
+        dialogexit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
     }
-    public int dptopx(Context context , int dp)
+    public int dptopx(Context context , int dp)//dp단위를 px로 바꿔준다
     {
         float density = context.getResources().getDisplayMetrics().density;
         return Math.round((float) dp * density);
@@ -219,6 +311,23 @@ public class Mainpage extends AppCompatActivity {
         if(dt[35].getText() == "")
         {
             layout6.setVisibility(View.GONE);
+        }
+    }
+
+    private class SlidingAnimationListener implements Animation.AnimationListener {
+        @Override
+        public void onAnimationStart(Animation animation) {
+
+        }
+
+        @Override
+        public void onAnimationEnd(Animation animation) {
+
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+
         }
     }
 }

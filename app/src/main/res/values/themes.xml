@@ -14,4 +14,12 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
+    
+    <style name="calendarcell" parent ="Widget.AppCompat.TextView">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/light_beige</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>
