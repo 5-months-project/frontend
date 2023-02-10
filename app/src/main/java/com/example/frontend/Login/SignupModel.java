@@ -29,18 +29,3 @@ public class SignupModel {
 
 
 }
-
-
-//
-//
-//
-
-//
-//
-//    @Override
-//    public String toString() {
-//        return "signupModel{" +
-//                "username='" + username + '\'' +
-//                ", authorityName='" + authorityName + '\'' +
-//                '}';
-//    }

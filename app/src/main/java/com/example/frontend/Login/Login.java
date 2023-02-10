@@ -124,10 +124,8 @@ public class Login extends AppCompatActivity {
                         hel[0] = response.body();
                         Log.d("이거 되나요?",hel[0].getresponse());
                     }
-
                     @Override
                     public void onFailure(Call<TokenModel> call, Throwable t) {
-
                     }
                 });
 
@@ -218,30 +216,6 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-//        login_id.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openKeyboard();
-//            }
-//        });
-//        login_password.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openKeyboard();
-//            }
-//        });
-//        res_id.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openKeyboard();
-//            }
-//        });
-//        res_pw.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openKeyboard();
-//            }
-//        });
 
     }
 

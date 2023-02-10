@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/largecal"
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:background="@color/light_beige"
+        android:clickable="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SUN"
+                android:textColor="#FF0000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="MON"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TUE"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="WED"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="THU"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="FRI"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SAT"
+                android:textColor="#2196F3"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/viewgroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <FrameLayout
+                    android:id="@+id/case_1"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_1"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_2"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_2"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_3"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_3"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_4"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_4"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_5"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_5"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_6"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_6"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_7"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_7"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/progress_1_1_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_1_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_1_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_2_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_2_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_2_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_3_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_3_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_3_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_4_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_4_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_4_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_5_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_5_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_5_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_6_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_6_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_6_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_7_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_7_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_1_7_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/viewgroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <FrameLayout
+                    android:id="@+id/case_8"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_8"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_9"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_9"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_10"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_10"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_11"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_11"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_12"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_12"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_13"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_13"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_14"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_14"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/progress_2_1_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_1_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_1_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_2_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_2_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_2_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_3_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_3_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_3_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_4_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_4_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_4_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_5_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_5_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_5_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_6_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_6_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_6_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_7_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_7_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_2_7_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/viewgroup3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:weightSum="7">
+
+
+                <FrameLayout
+                    android:id="@+id/case_15"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_15"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_16"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_16"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_17"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_17"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_18"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_18"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_19"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_19"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_20"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_20"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_21"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_21"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/progress_3_1_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_1_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_1_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_2_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_2_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_2_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="59dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_3_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_3_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_3_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="116dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_4_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_4_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_4_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="173dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_5_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_5_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_5_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_6_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_6_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_6_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="287dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_7_1"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_7_2"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/progress_3_7_3"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="344dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/progress_today"
+                    android:text="프로젝트 회의"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/viewgroup4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:weightSum="7">
+
+                <FrameLayout
+                    android:id="@+id/case_22"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_22"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_23"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_23"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_24"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="116dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_24"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_25"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_25"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_26"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_26"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_27"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_27"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_28"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_28"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/viewgroup5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:weightSum="7">
+
+                <FrameLayout
+                    android:id="@+id/case_29"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_29"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_30"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_30"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_31"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="116dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_31"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_32"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_32"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_33"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_33"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_34"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_34"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_35"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_35"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/viewgroup6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:visibility="visible"
+                android:weightSum="7">
+
+                <FrameLayout
+                    android:id="@+id/case_36"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="2dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_36"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_37"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="59dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_37"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_38"
+                    style="@style/calendarcell"
+                    android:layout_marginStart="116dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_38"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_39"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="173dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_39"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_40"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="230dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_40"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_41"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="287dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_41"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/case_42"
+                    style="@style/calendarcell"
+                    android:layout_marginLeft="344dp">
+
+                    <TextView
+                        android:id="@+id/cal_txt_42"
+                        style="@style/largecal"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                </FrameLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

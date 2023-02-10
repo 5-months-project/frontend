@@ -326,7 +326,6 @@ public class Mainpage extends AppCompatActivity {
     {
         for(int i = 0 ; i < sample.size(); i++) {
             TextView view1 = new TextView(this);
-            Log.d("bbbbbbb", sample.get(i).gettitle());
             view1.setText(sample.get(i).gettitle());
             view1.setTextSize(15);
             view1.setGravity(Gravity.CENTER);
@@ -334,7 +333,6 @@ public class Mainpage extends AppCompatActivity {
             Typeface typeface = Typeface.createFromAsset(getAssets(), "font/lineseedkr_rg.otf");
             view1.setTypeface(typeface, typeface.BOLD);
             int res = sample.get(i).getend()-sample.get(i).getstart();
-            Log.d("ttttt",""+sample.get(i).getstartday()+sample.get(i).getend() + sample.get(i).getstart());
             view1.setBackground(getDrawable(R.drawable.progress_today));
             ConstraintLayout.LayoutParams lp = new
                     ConstraintLayout.LayoutParams(dptopx(this, 55+55*res), ViewGroup.LayoutParams.WRAP_CONTENT);
