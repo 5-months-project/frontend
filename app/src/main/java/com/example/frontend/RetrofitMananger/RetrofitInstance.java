@@ -1,29 +1,33 @@
 package com.example.frontend.RetrofitMananger;
 
+import android.text.TextUtils;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class RetrofitInstance {
 
-    private static final String BASE_URL = "http://52.79.155.82:8080/";
-
-    public static RetrofitService getApiService(){
+    private static final String BASE_URL = "http://think2022.iptime.org:8080/api/";
 
 
-        return getInstance().create(RetrofitService.class);}
+    public static RetrofitService getApiService() {
 
 
-    private static Retrofit getInstance(){
+        return getInstance().create(RetrofitService.class);
+    }
+
+
+    private static Retrofit getInstance() {
         Gson gson = new GsonBuilder().setLenient().create();
         return new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }
-
- }
+}
 

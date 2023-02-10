@@ -1,6 +1,7 @@
 package com.example.frontend.Group;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,17 +38,7 @@ public class Group extends AppCompatActivity {
 
 
 
-
-
-        TextView schedulebtn = findViewById(R.id.btn_schedule_group);
-        schedulebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        TextView createbtn = findViewById(R.id.btn_create);
+        ConstraintLayout createbtn = findViewById(R.id.btn_create);
         createbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,13 +49,13 @@ public class Group extends AppCompatActivity {
 
             }
         });
-        TextView joinbtn = findViewById(R.id.btn_join);
-        joinbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog_join();
-            }
-        });
+//        TextView joinbtn = findViewById(R.id.btn_join);
+//        joinbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog_join();
+//            }
+//        });
 
         //sample에 서버와 통신한 데이터를 넣어주면 된다!
         String[][] sample = new String[2][4];

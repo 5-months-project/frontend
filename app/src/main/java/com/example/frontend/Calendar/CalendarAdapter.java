@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.frontend.R;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHolder> {
-    private String[][] mlist;
+    private final String[][] mlist;
 
     public CalendarAdapter(String[][] sample) {
         mlist = sample;
@@ -38,7 +38,6 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.ViewHo
         View view = inflater.inflate(R.layout.item_schedule,parent,false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 

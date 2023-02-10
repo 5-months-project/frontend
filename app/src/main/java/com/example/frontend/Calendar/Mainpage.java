@@ -1,7 +1,8 @@
 package com.example.frontend.Calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -9,9 +10,12 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -23,9 +27,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.frontend.Group.Group;
-import com.example.frontend.Profile;
 import com.example.frontend.R;
 
+import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,30 +41,149 @@ public class Mainpage extends AppCompatActivity {
     LocalDate yeardate;
     RecyclerView.Adapter adapter;
     //RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-    public static TextView dt[] = new TextView[42];
-    public static FrameLayout btn_dt[] = new FrameLayout[42];
+    public static TextView[] dt = new TextView[42];
+    public static FrameLayout[] btn_dt = new FrameLayout[42];
+    public static TextView[] smallcaldt = new TextView[42];
+    public static ConstraintLayout[] viewgroup = new ConstraintLayout[6];
     public static int[] inttmp  = new int[2];
+    public static String[] date;
     Animation to_left_animation;
     Animation to_right_animation;
+    Animation largecal_to_bottom_animation;
+    Animation largecal_to_top_animation;
+    Animation smallcal_to_top_animation;
+    Animation smallcal_to_bottom_animation;
     List<CalendarModel> result = new ArrayList<>();
+    public static class texttype{
+        private int id;
+        private int start;
+        private int end;
+        private String title;
+        private int startday;
+        public int getid() {
+            return id;
+        }
+        public void setid(int id) {
+            this.id = id;
+        }
+        public int getstart() {
+            return start;
+        }
+        public void setstart(int start) {
+            this.start = start;
+        }
+        public int getend() {
+            return end;
+        }
+        public void setend(int end) {
+            this.end = end;
+        }
+        public String gettitle() {
+            return title;
+        }
+        public void settitle(String title) {
+            this.title = title;
+        }
+        public int getstartday()
+        {
+            return startday;
+        }
+
+        texttype(int id ,int startday,int start , int end , String title)
+        {
+            this.id = id;
+            this.start = start;
+            this.end = end;
+            this.title = title;
+            this.startday = startday;
+        }
+
+    }
+    List<texttype> textview = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
         final boolean[] status_menu = {false};
+        Handler handler = new Handler();
         to_left_animation = AnimationUtils.loadAnimation(this,R.anim.anim_to_left);
         to_right_animation = AnimationUtils.loadAnimation(this,R.anim.anim_to_right);
+        largecal_to_bottom_animation = AnimationUtils.loadAnimation(this,R.anim.anim_largecal_to_bottom);
+        largecal_to_top_animation = AnimationUtils.loadAnimation(this,R.anim.anim_largecal_to_top);
+        smallcal_to_top_animation = AnimationUtils.loadAnimation(this,R.anim.anim_smallcal_to_top);
+        smallcal_to_bottom_animation = AnimationUtils.loadAnimation(this,R.anim.anim_smallcal_to_bottom);
+        TextView smallcal_month_head = findViewById(R.id.smallcal_month_head);
+        TextView smallcal_month_body = findViewById(R.id.smallcal_month_body);
+
+
+        for(int i = 0; i < 42 ; i ++ )
+        {
+            String tmp = "smallcal_"+(i+1);
+            int resID = getResources().getIdentifier(tmp,"id",getPackageName());
+            smallcaldt[i] = ((TextView)findViewById(resID));
+        }
+        for(int i = 0 ; i <6 ; i ++)
+        {
+            String tmp = "viewgroup"+(i+1);
+            int resID = getResources().getIdentifier(tmp,"id",getPackageName());
+            viewgroup[i] = ((ConstraintLayout)findViewById(resID));
+        }
 
 
         SlidingAnimationListener animationListener = new SlidingAnimationListener();
         to_left_animation.setAnimationListener(animationListener);
         to_right_animation.setAnimationListener(animationListener);
+        largecal_to_bottom_animation.setAnimationListener(animationListener);
+        largecal_to_top_animation.setAnimationListener(animationListener);
+        smallcal_to_top_animation.setAnimationListener(animationListener);
+        smallcal_to_bottom_animation.setAnimationListener(animationListener);
+        ViewPager2 calviewpager = findViewById(R.id.viewpager_calendar);
+
         LinearLayout sidemenu = findViewById(R.id.side_menu);
+        FrameLayout largecal = findViewById(R.id.largecal);
+        ConstraintLayout smallcal = findViewById(R.id.smallcal);
+        smallcal.setOnTouchListener(new OnSwipeTouchListener(Mainpage.this)
+        {
+            public void onSwipeTop()
+            {
+                smallcal.startAnimation(smallcal_to_top_animation);
+//                largecal.startAnimation(largecal_to_bottom_animation);
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        calviewpager.setVisibility(View.GONE);
+                        smallcal.setClickable(false);
+                        calviewpager.setClickable(false);
+                        largecal.setClickable(true);
+                        smallcal.setVisibility(View.GONE);
+                        largecal.setVisibility(View.VISIBLE);
+                    }
+                }, 300); //딜레이 타임 조절
+
+            }
+            public void onSwipeBottom()
+            {
+                smallcal.startAnimation(smallcal_to_bottom_animation);
+//                largecal.startAnimation(largecal_to_top_animation);
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        calviewpager.setVisibility(View.VISIBLE);
+                        smallcal.setClickable(true);
+                        calviewpager.setClickable(true);
+                        largecal.setClickable(false);
+                        smallcal.setVisibility(View.VISIBLE);
+                        largecal.setVisibility(View.GONE);
+                    }
+                }, 300); //딜레이 타임 조절
+
+            }
+        });
 
         //서버에 viewpager에 들어갈 데이터를 넣어주면 됨
         String[] samp = new String[]{"1번", "2번", "3번", "4번", "5번","6번",""};
-        ViewPager2 calviewpager = findViewById(R.id.viewpager_calendar);
         calviewpager.setAdapter(new PagerAdapter(samp));
         calviewpager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
 
@@ -108,10 +231,13 @@ public class Mainpage extends AppCompatActivity {
         });//페이지 넘기는 코드(to group)
 
 
+
+
+
         //달력에 날짜 설정
         yeardate = LocalDate.now();
         String tmp = yeardate.toString();
-        String[] date = tmp.split("-");
+        date = tmp.split("-");
         Calendar start = Calendar.getInstance();
         Calendar end = Calendar.getInstance();
         Calendar end_last = Calendar.getInstance();
@@ -127,8 +253,22 @@ public class Mainpage extends AppCompatActivity {
         int End_day = end.get(Calendar.DATE);
         int End_day_last = end_last.get(Calendar.DATE);
         setdate(Start_day,End_day,Start_day_next,End_day_last);
-
-
+        TextView smallcal_year = findViewById(R.id.smallcal_year);
+        smallcal_year.setText(date[0]);
+        switch (date[1]) {
+            case "1" : smallcal_month_head.setText("J"); smallcal_month_body.setText("ANUARY");
+            case "2" : smallcal_month_head.setText("F"); smallcal_month_body.setText("EBRUARY");
+            case "3" : smallcal_month_head.setText("M"); smallcal_month_body.setText("ARCH");
+            case "4" : smallcal_month_head.setText("A"); smallcal_month_body.setText("PRIL");
+            case "5" : smallcal_month_head.setText("M"); smallcal_month_body.setText("AY");
+            case "6" : smallcal_month_head.setText("J"); smallcal_month_body.setText("UNE");
+            case "7" : smallcal_month_head.setText("J"); smallcal_month_body.setText("ULY");
+            case "8" : smallcal_month_head.setText("A"); smallcal_month_body.setText("UGUST");
+            case "9" : smallcal_month_head.setText("S"); smallcal_month_body.setText("EPTEMBER");
+            case "10" : smallcal_month_head.setText("O"); smallcal_month_body.setText("CTOBER");
+            case "11" : smallcal_month_head.setText("N"); smallcal_month_body.setText("OVEMBER");
+            case "12" : smallcal_month_head.setText("D"); smallcal_month_body.setText("ECEMBER");
+        }
 
 
         //일정
@@ -182,12 +322,44 @@ public class Mainpage extends AppCompatActivity {
             btn_dt[i].setOnClickListener(dialogclicklistener);
         }
     }
+    public void createtext(List<texttype> sample)
+    {
+        for(int i = 0 ; i < sample.size(); i++) {
+            TextView view1 = new TextView(this);
+            Log.d("bbbbbbb", sample.get(i).gettitle());
+            view1.setText(sample.get(i).gettitle());
+            view1.setTextSize(15);
+            view1.setGravity(Gravity.CENTER);
+            view1.setTextColor(getResources().getColor(R.color.dark_brown));
+            Typeface typeface = Typeface.createFromAsset(getAssets(), "font/lineseedkr_rg.otf");
+            view1.setTypeface(typeface, typeface.BOLD);
+            int res = sample.get(i).getend()-sample.get(i).getstart();
+            Log.d("ttttt",""+sample.get(i).getstartday()+sample.get(i).getend() + sample.get(i).getstart());
+            view1.setBackground(getDrawable(R.drawable.progress_today));
+            ConstraintLayout.LayoutParams lp = new
+                    ConstraintLayout.LayoutParams(dptopx(this, 55+55*res), ViewGroup.LayoutParams.WRAP_CONTENT);
+            view1.setLayoutParams(lp);
+            ConstraintSet set = new ConstraintSet();
+            view1.setId(sample.get(i).getid());
+
+            viewgroup[sample.get(i).getstartday()/7].addView(view1);
+            set.clone(viewgroup[sample.get(i).getstartday()/7]);
+            set.connect(view1.getId(), ConstraintSet.TOP, viewgroup[sample.get(i).getstartday()/7].getId(), ConstraintSet.TOP, 70+60*i);
+            set.applyTo(viewgroup[sample.get(i).getstartday()/7]);
+
+//        Log.d("456",sample.get(0).gettitle());
+        }
+
+
+
+    }
 
     private final View.OnClickListener dialogclicklistener = new View.OnClickListener() {//누르면 다이얼로그 창이 뜨게끔 하는 클릭 리스너
         @Override
         public void onClick(View v) {
             int t = (int)v.getTag();//t는 몇번째 칸인지 표시 -> 요일 계산
-            dialog_calendar(t, Integer.parseInt((String) dt[t].getText()));//dt에는 cal_txt가 들어가있고 여기엔 그날이 몇일인지 표시
+
+            dialog_calendar(t, Integer.parseInt((String) dt[t].getText()),Integer.parseInt(date[1]));//dt에는 cal_txt가 들어가있고 여기엔 그날이 몇일인지 표시
         }
     };
     public void dialog_login()//로그인 다이얼로그
@@ -203,7 +375,7 @@ public class Mainpage extends AppCompatActivity {
         dialog.show();
 
     }
-    public void dialog_calendar(int day, int date)//캘린더 다이얼로그 창
+    public void dialog_calendar(int day, int dat, int month)//캘린더 다이얼로그 창
     {
         Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -214,16 +386,19 @@ public class Mainpage extends AppCompatActivity {
         params.height = dptopx(this,600);
         dialog.getWindow().setAttributes(params);
         final TextView dialogdate = dialog.findViewById(R.id.dialog_date);
-        final TextView dialogday = dialog.findViewById(R.id.dialog_day);
+
         final TextView dialogexit = dialog.findViewById(R.id.dialog_cal_exit);
-        dialogdate.setText(String.valueOf(date));
-        if(day==0||day==7||day==14||day==21||day==28||day==35) dialogday.setText("Sunday");
-        else if(day==1||day==8||day==15||day==22||day==29||day==36) dialogday.setText("Monday");
-        else if(day==2||day==9||day==16||day==23||day==30||day==37) dialogday.setText("Tuesday");
-        else if(day==3||day==10||day==17||day==24||day==31||day==38) dialogday.setText("Wednesday");
-        else if(day==4||day==11||day==18||day==25||day==32||day==39) dialogday.setText("Thursday");
-        else if(day==5||day==12||day==19||day==26||day==33||day==40) dialogday.setText("Friday");
-        else if(day==6||day==13||day==20||day==27||day==34||day==41) dialogday.setText("Saturday");
+        dialogdate.setText(month+"월"+ dat +"일");
+
+//        final TextView dialogday = dialog.findViewById(R.id.dialog_day);
+//        if(day==0||day==7||day==14||day==21||day==28||day==35) dialogday.setText("Sunday");
+//        else if(day==1||day==8||day==15||day==22||day==29||day==36) dialogday.setText("Monday");
+//        else if(day==2||day==9||day==16||day==23||day==30||day==37) dialogday.setText("Tuesday");
+//        else if(day==3||day==10||day==17||day==24||day==31||day==38) dialogday.setText("Wednesday");
+//        else if(day==4||day==11||day==18||day==25||day==32||day==39) dialogday.setText("Thursday");
+//        else if(day==5||day==12||day==19||day==26||day==33||day==40) dialogday.setText("Friday");
+//        else if(day==6||day==13||day==20||day==27||day==34||day==41) dialogday.setText("Saturday");
+
         dialog.show();
         //리사이클러 뷰 어댑터 설정
         String[][] sample = new String[2][2];//서버와 통신하게 되면 캘린더 모델로 전달
@@ -231,6 +406,11 @@ public class Mainpage extends AppCompatActivity {
         sample[0][1] = "2월 4일 22:00 회의 진행";
         sample[1][0] = "프로젝트 발표";
         sample[1][1] = "2월 12일 일요일 발표";
+
+
+
+
+
 
         RecyclerView recyclerView = dialog.findViewById(R.id.recyclerview_schedule);
         recyclerView.setLayoutManager(new RecyclerView.LayoutManager() {
@@ -300,10 +480,12 @@ public class Mainpage extends AppCompatActivity {
         dt[40] =findViewById(R.id.cal_txt_41);
         dt[41] =findViewById(R.id.cal_txt_42);
         ViewGroup layout6 = findViewById(R.id.viewgroup6);
+        LinearLayout smallcallayout6 = findViewById(R.id.smallcallayout_6);
         layout6.setVisibility(View.VISIBLE);
         for(int i = 0 ; i < 42; i++)
         {
             dt[i].setText("");
+            smallcaldt[i].setText("");
         }
         int k = 1;
         int p = 1;
@@ -312,17 +494,23 @@ public class Mainpage extends AppCompatActivity {
         {
             if(start<=i&&i<start+end)
             {
-                dt[i-1].setText(""+k); k++;
+                dt[i-1].setText(""+k);
+                smallcaldt[i-1].setText(""+k);
+                k++;
             }
             else if(i>=start+end){
                 //텍스트 컬러 변경하기
                 dt[i-1].setText(""+p);
+                smallcaldt[i-1].setText(""+p);
+                smallcaldt[i-1].setTextColor(getResources().getColor(R.color.brown));
                 p++;
             }
             else if(i<start)
             {
                 //텍스트 컬러 변경하기
                 dt[i-1].setText(""+(End_day_last-start+c+2));
+                smallcaldt[i-1].setText(""+(End_day_last-start+c+2));
+                smallcaldt[i-1].setTextColor(getResources().getColor(R.color.brown));
                 c++;
 
             }
@@ -330,7 +518,31 @@ public class Mainpage extends AppCompatActivity {
         if(start+end<=35)
         {
             layout6.setVisibility(View.GONE);
+            smallcallayout6.setVisibility(View.GONE);
         }
+        for(int i = 0 ; i < 6 ; i ++)
+        {
+            if(i*7>start)smallcaldt[i*7].setTextColor(Color.parseColor("#FF0000"));
+            else if(i*7+6<end)smallcaldt[i*7+6].setTextColor(Color.parseColor("#2196F3"));
+
+        }
+        int a = Integer.parseInt(date[2]);
+
+        smallcaldt[a+start-2].setBackground(getDrawable(R.drawable.background_today));
+        smallcaldt[a+start-2].setTextColor(getColor(R.color.white));
+
+
+        texttype test = new texttype(1,a+start-2,6,9,"프로젝트");
+        texttype test1 = new texttype(2,a+start-2,2,4,"계획");
+
+        Log.d("bbbbbbb",""+test.getid());
+        textview.add(0,test);
+        textview.add(1,test1);
+        createtext(textview);
+
+
+
+
     }
 
     private class SlidingAnimationListener implements Animation.AnimationListener {

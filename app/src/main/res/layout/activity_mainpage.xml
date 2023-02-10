@@ -4,136 +4,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_beige"
     tools:context=".Calendar.Mainpage">
 
-    <TextView
-        android:id="@+id/txt_year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2023"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/dark_brown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
-        >
-    </TextView>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/btn_side_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="사이드 메뉴 버튼"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        <TextView
+            android:id="@+id/btn_side_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사이드 메뉴 버튼"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Juary"
-        android:textColor="#BDADA6"
-        android:textSize="20sp"
-        android:fontFamily="@font/cambria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_year" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.5">
-
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewpager_calendar"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공다 로고"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-    </LinearLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/beige"
+        android:clickable="true"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.9">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <FrameLayout
+        android:id="@+id/largecal"
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:background="@color/light_beige"
+        android:clickable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        <TextView
+            android:id="@+id/largecal_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lineseedkr_rg"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="65dp"
+            android:text="2023"
+            android:textColor="@color/brown"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/largecal_month_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="center_horizontal"
+            android:text="J"
+            android:fontFamily="@font/font"
+            android:textColor="@color/dark_brown"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/smallcal_year"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077" />
+
+        <TextView
+            android:id="@+id/largecal_month_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANUARY"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="22dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/dark_brown"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/smallcal_month_head"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.112" />
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="7">
+            android:weightSum="7"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:layout_width="23dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/cambria"
                 android:gravity="center"
-                android:text=" Sun"></TextView>
+                android:text="SUN"
+                android:textColor="#FF0000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="23dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/cambria"
                 android:gravity="center"
-                android:text="Mon"></TextView>
+                android:text="MON"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="23dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/cambria"
                 android:gravity="center"
-                android:text="Tue"></TextView>
+                android:text="TUE"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="23dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/cambria"
                 android:gravity="center"
-                android:text="Wed"></TextView>
+                android:text="WED"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="23dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/cambria"
                 android:gravity="center"
-                android:text="Thu"></TextView>
+                android:text="THU"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="23dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/cambria"
                 android:gravity="center"
-                android:text="Fri"></TextView>
+                android:text="FRI"
+                android:textColor="@color/dark_brown"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
-                android:layout_width="23dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/cambria"
                 android:gravity="center"
-                android:text="Sat"></TextView>
+                android:text="SAT"
+                android:textColor="#2196F3"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -141,25 +218,24 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/viewgroup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="130dp">
 
                 <FrameLayout
                     android:id="@+id/case_1"
                     style="@style/calendarcell"
-                    android:layout_marginStart="2dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/cambria"
+                        style="@style/largecal"
                         android:text="1"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
 
@@ -169,12 +245,14 @@
                 <FrameLayout
                     android:id="@+id/case_2"
                     style="@style/calendarcell"
-                    android:layout_marginStart="59dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_1"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -183,12 +261,15 @@
                 <FrameLayout
                     android:id="@+id/case_3"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="116dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_2"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -197,12 +278,15 @@
                 <FrameLayout
                     android:id="@+id/case_4"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="173dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_3"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -211,12 +295,15 @@
                 <FrameLayout
                     android:id="@+id/case_5"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="230dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_4"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -225,12 +312,15 @@
                 <FrameLayout
                     android:id="@+id/case_6"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="287dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_5"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -239,41 +329,23 @@
                 <FrameLayout
                     android:id="@+id/case_7"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="344dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_6"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
 
-                <TextView
-                    android:id="@+id/progress_1_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/progress_today"
-                    android:text="프로젝트 회의"
-                    android:textColor="@color/white"
-                    android:textSize="9sp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/progress_1_2"
-                    android:layout_width="55dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="35dp"
-                    android:background="@drawable/progress_today"
-                    android:text="프로젝트 회의"
-                    android:textColor="@color/white"
-                    android:textSize="9sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/viewgroup2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -282,30 +354,33 @@
                 <FrameLayout
                     android:id="@+id/case_8"
                     style="@style/calendarcell"
-                    android:layout_marginStart="2dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/cambria"
+                        style="@style/largecal"
                         android:text="1"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
                 </FrameLayout>
 
                 <FrameLayout
                     android:id="@+id/case_9"
                     style="@style/calendarcell"
-                    android:layout_marginStart="59dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_8"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -314,12 +389,15 @@
                 <FrameLayout
                     android:id="@+id/case_10"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="116dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_9"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -328,12 +406,15 @@
                 <FrameLayout
                     android:id="@+id/case_11"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="173dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_10"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -342,12 +423,15 @@
                 <FrameLayout
                     android:id="@+id/case_12"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="230dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_11"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -356,12 +440,15 @@
                 <FrameLayout
                     android:id="@+id/case_13"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="287dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_12"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -370,39 +457,43 @@
                 <FrameLayout
                     android:id="@+id/case_14"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="344dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_13"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
-            </FrameLayout>
 
-            <FrameLayout
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/viewgroup3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:weightSum="7">
 
+
                 <FrameLayout
                     android:id="@+id/case_15"
                     style="@style/calendarcell"
-                    android:layout_marginStart="2dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/cambria"
+                        style="@style/largecal"
                         android:text="1"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
@@ -410,12 +501,15 @@
                 <FrameLayout
                     android:id="@+id/case_16"
                     style="@style/calendarcell"
-                    android:layout_marginStart="59dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_15"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -424,13 +518,15 @@
                 <FrameLayout
                     android:id="@+id/case_17"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="116dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_16"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity=""
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -439,12 +535,14 @@
                 <FrameLayout
                     android:id="@+id/case_18"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="173dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_17">
 
                     <TextView
                         android:id="@+id/cal_txt_18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -453,12 +551,14 @@
                 <FrameLayout
                     android:id="@+id/case_19"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="230dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_18">
 
                     <TextView
                         android:id="@+id/cal_txt_19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -467,12 +567,14 @@
                 <FrameLayout
                     android:id="@+id/case_20"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="287dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_19">
 
                     <TextView
                         android:id="@+id/cal_txt_20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -481,19 +583,22 @@
                 <FrameLayout
                     android:id="@+id/case_21"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="344dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_20">
 
                     <TextView
                         android:id="@+id/cal_txt_21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
-            </FrameLayout>
 
-            <FrameLayout
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/viewgroup4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -503,17 +608,15 @@
                 <FrameLayout
                     android:id="@+id/case_22"
                     style="@style/calendarcell"
-                    android:layout_marginStart="2dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_22"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/cambria"
+                        style="@style/largecal"
                         android:text="1"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
@@ -521,12 +624,15 @@
                 <FrameLayout
                     android:id="@+id/case_23"
                     style="@style/calendarcell"
-                    android:layout_marginStart="59dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_22"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -535,12 +641,15 @@
                 <FrameLayout
                     android:id="@+id/case_24"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="116dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_23"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -549,26 +658,33 @@
                 <FrameLayout
                     android:id="@+id/case_25"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="173dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
 
+
                 <FrameLayout
                     android:id="@+id/case_26"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="230dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_25"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_26"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -577,12 +693,15 @@
                 <FrameLayout
                     android:id="@+id/case_27"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="287dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_26"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -591,19 +710,24 @@
                 <FrameLayout
                     android:id="@+id/case_28"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="344dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_27"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_28"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
-            </FrameLayout>
 
-            <FrameLayout
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/viewgroup5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -613,17 +737,15 @@
                 <FrameLayout
                     android:id="@+id/case_29"
                     style="@style/calendarcell"
-                    android:layout_marginStart="2dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_29"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/cambria"
+                        style="@style/largecal"
                         android:text="1"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
@@ -631,12 +753,14 @@
                 <FrameLayout
                     android:id="@+id/case_30"
                     style="@style/calendarcell"
-                    android:layout_marginStart="59dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_29"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -645,12 +769,15 @@
                 <FrameLayout
                     android:id="@+id/case_31"
                     style="@style/calendarcell"
-                    android:layout_marginStart="116dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_30"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_31"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -659,12 +786,15 @@
                 <FrameLayout
                     android:id="@+id/case_32"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="173dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_31"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_32"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -673,12 +803,14 @@
                 <FrameLayout
                     android:id="@+id/case_33"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="230dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_32"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_33"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -687,12 +819,15 @@
                 <FrameLayout
                     android:id="@+id/case_34"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="287dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_33"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_34"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -701,19 +836,22 @@
                 <FrameLayout
                     android:id="@+id/case_35"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="344dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_34"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
 
                     <TextView
                         android:id="@+id/cal_txt_35"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
-            </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/viewgroup6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -724,17 +862,16 @@
                 <FrameLayout
                     android:id="@+id/case_36"
                     style="@style/calendarcell"
-                    android:layout_marginStart="2dp">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="2dp"
+                    >
 
                     <TextView
                         android:id="@+id/cal_txt_36"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/cambria"
+                        style="@style/largecal"
                         android:text="1"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
@@ -742,12 +879,14 @@
                 <FrameLayout
                     android:id="@+id/case_37"
                     style="@style/calendarcell"
-                    android:layout_marginStart="59dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_36"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_37"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -756,12 +895,14 @@
                 <FrameLayout
                     android:id="@+id/case_38"
                     style="@style/calendarcell"
-                    android:layout_marginStart="116dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_37"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_38"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -770,12 +911,14 @@
                 <FrameLayout
                     android:id="@+id/case_39"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="173dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_38"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_39"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -784,12 +927,14 @@
                 <FrameLayout
                     android:id="@+id/case_40"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="230dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_39"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_40"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -798,12 +943,14 @@
                 <FrameLayout
                     android:id="@+id/case_41"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="287dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_40"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_41"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -812,35 +959,496 @@
                 <FrameLayout
                     android:id="@+id/case_42"
                     style="@style/calendarcell"
-                    android:layout_marginLeft="344dp">
+                    android:layout_marginStart="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/case_41"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/cal_txt_42"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/largecal"
                         android:text="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"></TextView>
                 </FrameLayout>
-            </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </LinearLayout>
 
 
     </FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/brown"
+        android:fontFamily="@font/opensans_regular"
+        android:gravity="center"
+        android:text="일정 추가"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/smallcal"
+            android:layout_width="400dp"
+            android:layout_height="450dp"
+            android:background="@color/light_beige"
+            android:clickable="true"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewpager_calendar">
+
+            <TextView
+                android:id="@+id/smallcal_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lineseedkr_rg"
+                android:rotation="-90"
+                android:text="2023"
+                android:textColor="@color/brown"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.01"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/smallcal_month_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="J"
+                android:textColor="@color/dark_brown"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/smallcal_year"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.077" />
+
+            <TextView
+                android:id="@+id/smallcal_month_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ANUARY"
+                android:textColor="@color/dark_brown"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/smallcal_month_head"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.112" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/smallcal_month_head">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="SUN"
+                        android:textColor="#FF0000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="MON"
+                        android:textColor="@color/dark_brown"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TUE"
+                        android:textColor="@color/dark_brown"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="WED"
+                        android:textColor="@color/dark_brown"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="THU"
+                        android:textColor="@color/dark_brown"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView13"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="FRI"
+                        android:textColor="@color/dark_brown"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView14"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="SAT"
+                        android:textColor="#2196F3"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:id="@+id/smallcal_1"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_2"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_3"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_4"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_5"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_6"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_7"
+                            style="@style/smallcal"
+                            android:text="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:id="@+id/smallcal_8"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_9"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_10"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_11"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_12"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_13"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_14"
+                            style="@style/smallcal"
+                            android:text="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:id="@+id/smallcal_15"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_16"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_17"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_18"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_19"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_20"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_21"
+                            style="@style/smallcal"
+                            android:text="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:id="@+id/smallcal_22"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_23"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_24"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_25"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_26"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_27"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_28"
+                            style="@style/smallcal"
+                            android:text="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:id="@+id/smallcal_29"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_30"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_31"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_32"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_33"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_34"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_35"
+                            style="@style/smallcal"
+                            android:text="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/smallcallayout_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:id="@+id/smallcal_36"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_37"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_38"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_39"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_40"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_41"
+                            style="@style/smallcal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/smallcal_42"
+                            style="@style/smallcal"
+                            android:text="1" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:id="@+id/side_menu"
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:background="@color/sidemenu_background"
+        android:orientation="vertical"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
-        android:orientation="vertical"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -865,56 +1473,49 @@
                 android:text="닫기 아이콘"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                ></TextView>
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="공다 아이콘"
             android:layout_gravity="center"
-            ></TextView>
+            android:text="공다 아이콘"></TextView>
+
         <TextView
             android:id="@+id/calendar_sidemenu_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GONGDA@GAMIL.COM"
             android:layout_gravity="center"
-            ></TextView>
+            android:text="GONGDA@GAMIL.COM"></TextView>
+
         <TextView
             android:id="@+id/calendar_sidemenu_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LOGOUT"
             android:layout_gravity="center"
             android:gravity="center"
-            ></TextView>
+            android:text="LOGOUT"></TextView>
 
         <TextView
             android:id="@+id/calendar_btn_plan"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="PLAN"
-            >
-        </TextView>
+            android:text="PLAN"></TextView>
 
         <TextView
             android:id="@+id/calendar_btn_group"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="UNION"
-            >
-        </TextView>
+            android:text="UNION"></TextView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="DIARY"
-            ></TextView>
-
-
-
+            android:text="DIARY"></TextView>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

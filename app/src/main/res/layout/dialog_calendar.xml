@@ -2,58 +2,64 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="400dp"
     android:layout_height="600dp"
-    android:background="@drawable/item_group_edge">
+    android:background="@drawable/round_edge_dialog_calendar">
+
 
     <TextView
         android:id="@+id/dialog_cal_exit"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:gravity="center"
         android:text="x"
         android:textSize="20sp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/dialog_date"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_schedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"/>
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toEndOf="@+id/dialog_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426" />
 
     <TextView
         android:id="@+id/dialog_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="29"
+        android:text="1월20일"
         android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/lineseedkr_rg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <TextView
-        android:id="@+id/dialog_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="수요일"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/lineseedkr_rg"
+        android:text="D-8"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_schedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toEndOf="@+id/dialog_date"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_date"
+        app:layout_constraintVertical_bias="0.421"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_schedule"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dialog_date"
-        app:layout_constraintVertical_bias="0.05"
-        tools:listitem="@layout/item_schedule"
-
-        />
+        app:layout_constraintVertical_bias="0.1"
+        tools:listitem="@layout/item_schedule" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

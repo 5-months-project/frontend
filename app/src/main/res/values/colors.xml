@@ -7,7 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="light_beige">#F1EFE9</color>
+    <color name="light_beige">#F1ECE1</color>
     <color name="group_create">#D9DED8</color>
     <color name="sidemenu_background">#F1ECE1</color>
+    <color name="gray">#757575</color>
+    <color name="beige">#B4A79E</color>
+    <color name="dark_brown">#3F352C</color>
+    <color name="brown">#BDA18C</color>"
 </resources>

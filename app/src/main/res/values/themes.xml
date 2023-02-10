@@ -14,12 +14,42 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
-    
+
     <style name="calendarcell" parent ="Widget.AppCompat.TextView">
         <item name="android:layout_width">55dp</item>
         <item name="android:layout_height">70dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:background">@color/light_beige</item>
         <item name="android:gravity">center</item>
+    </style>
+    <style name="largecal" parent ="Widget.AppCompat.TextView">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="fontFamily">@font/font_lineseedkr_rg</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="smallcal" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/font_lineseedkr_rg</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="progressbar" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/font_lineseedkr_rg</item>
+        <item name="android:textStyle">bold</item>
+
+
     </style>
 </resources>

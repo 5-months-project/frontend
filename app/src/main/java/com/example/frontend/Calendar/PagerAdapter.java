@@ -14,7 +14,7 @@ import com.example.frontend.R;
 import java.util.ArrayList;
 
 public class PagerAdapter extends RecyclerView.Adapter<PagerAdapter.ViewHolder> {
-    private String[] mlist;
+    private final String[] mlist;
 
     public PagerAdapter(String[] samp) {
         mlist = samp;

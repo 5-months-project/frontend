@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.frontend.R;
 
 public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> {
-    private String[][] mlist;
+    private final String[][] mlist;
 
     public GroupAdapter(String[][] sample) {
         this.mlist = sample;
@@ -33,8 +33,6 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
             date = itemView.findViewById(R.id.txt_group_list_date);
             detail1 = itemView.findViewById(R.id.txt_group_list_detail1);
             detail2 = itemView.findViewById(R.id.txt_group_list_detail2);
-
-
         }
     }
     @NonNull
@@ -46,15 +44,14 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
         return new ViewHolder(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         holder.title.setText(mlist[position][0]);
         holder.date.setText(mlist[position][1]);
         holder.detail1.setText(mlist[position][2]);
         holder.detail2.setText(mlist[position][3]);
-
-
     }
 
     @Override
