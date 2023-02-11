@@ -1,7 +1,8 @@
 package com.example.frontend.RetrofitMananger;
 
+import com.example.frontend.Group.Group;
+import com.example.frontend.Group.GroupModel;
 import com.example.frontend.Login.SignupModel;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -19,9 +20,16 @@ public interface RetrofitService {
 
     @POST("authenticate")
     Call<AuthenticateModel> gettoken(@Body AuthenticateModel authenticateModel);
-
     @GET("hello")
-    Call<TokenModel> hello(@Path("bearer token") String token);
+    Call<TokenModel> hello( String token);
+
+
+    @POST("groups")//그룹 생성
+    Call<GroupModel>creategroup(@Body GroupModel groupModel);
+
+    @POST("groups")//그룹 리스트 조회
+    Call<GroupModel>grouplist(@Body GroupModel groupModel);
+
 
 
     @GET("push/{tokens}")

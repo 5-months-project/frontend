@@ -31,8 +31,6 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
             super(itemView);
             title = itemView.findViewById(R.id.txt_group_list_title);
             date = itemView.findViewById(R.id.txt_group_list_date);
-            detail1 = itemView.findViewById(R.id.txt_group_list_detail1);
-            detail2 = itemView.findViewById(R.id.txt_group_list_detail2);
         }
     }
     @NonNull
@@ -50,8 +48,6 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(mlist[position][0]);
         holder.date.setText(mlist[position][1]);
-        holder.detail1.setText(mlist[position][2]);
-        holder.detail2.setText(mlist[position][3]);
     }
 
     @Override

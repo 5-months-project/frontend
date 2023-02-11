@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class GroupModel {
 
-    @SerializedName("group_name")
-    private String group_name;
+    @SerializedName("groupname")
+    private String groupname;
 
-    @SerializedName("group_code")
-    private String group_code;
+    @SerializedName("groupcode")
+    private String groupcode;
 
-    @SerializedName("group_password")
-    private String group_password;
+    @SerializedName("password")
+    private String password;
 
     @SerializedName("group_created_at")
     private String group_created_at;
@@ -19,34 +19,31 @@ public class GroupModel {
     @SerializedName("group_updated_at")
     private String group_updated_at;
 
-    public String getgroup_name() {return group_name;}
+    public String getgroupname() {return groupname;}
 
-    public void setgroup_name(String group_name) {
-        this.group_name = group_name;
+    public void setgroupname(String groupname) {
+        this.groupname = groupname;
     }
 
-    public String getgroup_code() {
-        return group_code;
+    public String getgroupcode() {
+        return groupcode;
     }
 
-    public void setgroup_code(String group_code) {
-        this.group_code = group_code;
+    public void setgroupcode(String groupcode) {
+        this.groupcode = groupcode;
     }
 
-    public String getgroup_password() {
-        return group_password;
+    public String getpassword() {
+        return password;
     }
 
-    public void setgroup_password(String group_password) {
-        this.group_password = group_password;
+    public void setpassword(String password) {
+        this.password = password;
     }
 
     public String toString() {
-        return "CalendarModel{" +
-                "group_name='" + group_name + '\'' +
-                ", group_code='" + group_code + '\'' +
-                ", group_password='" + group_password + '\'' +
-                ", group_created_at='" + group_created_at + '\'' +
+        return "GroupModel{" +
+                "groupcode='" + groupcode + '\'' +
                 '}';
     }
 

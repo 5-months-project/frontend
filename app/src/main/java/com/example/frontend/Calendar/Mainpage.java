@@ -189,7 +189,7 @@ public class Mainpage extends AppCompatActivity {
 
 
 
-        TextView btn_sidemenu_open = findViewById(R.id.btn_side_menu);
+        LinearLayout btn_sidemenu_open = findViewById(R.id.btn_side_menu);
         btn_sidemenu_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -10,25 +10,47 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:background="@color/dark_brown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <LinearLayout
             android:id="@+id/group_btn_side_menu"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="사이드 메뉴 버튼"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            android:weightSum="3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="2dp"
+                android:background="@color/white"></View>
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"></View>
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"></View>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="공다 로고"
+            android:background="@drawable/gongda"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +63,7 @@
         android:id="@+id/recyclerView_group"
         android:layout_width="match_parent"
         android:layout_height="600dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
         tools:layout_editor_absoluteX="20dp"
         tools:listitem="@layout/item_group"></androidx.recyclerview.widget.RecyclerView>
@@ -67,46 +90,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
-
-
-<!--        <FrameLayout-->
-<!--            android:id="@+id/textView4"-->
-<!--            android:layout_width="250dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:background="@drawable/create_join"-->
-<!--            tools:layout_editor_absoluteX="32dp">-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/btn_create"-->
-<!--                android:layout_width="124dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:fontFamily="@font/cambria"-->
-<!--                android:gravity="center"-->
-<!--                android:text="Create"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/btn_join"-->
-<!--                android:layout_width="124dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_gravity="right"-->
-<!--                android:fontFamily="@font/cambria"-->
-<!--                android:gravity="center"-->
-<!--                android:text="Join"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold" />-->
-<!--        -->
-<!--        </FrameLayout>-->
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/group_side_menu"
+        android:id="@+id/side_menu"
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:background="@color/sidemenu_background"
@@ -119,27 +109,33 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="60dp">
 
             <TextView
-                android:id="@+id/group_btn_settings"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:id="@+id/calendar_btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:text="설정 아이콘"
+                android:background="@drawable/settings_right"
 
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></TextView>
-
-            <TextView
-                android:id="@+id/group_btn_close"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="right"
-                android:text="닫기 아이콘"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintVertical_bias="0.5"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/calendar_btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/close_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toEndOf="@+id/calendar_btn_settings"
                 app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
@@ -149,7 +145,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:text="공다 아이콘"></TextView>
+            android:background="@drawable/gongda"></TextView>
 
         <TextView
             android:id="@+id/group_sidemenu_email"
@@ -160,30 +156,29 @@
 
         <TextView
             android:id="@+id/group_sidemenu_logout"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="LOGOUT"></TextView>
+            android:text="LOGOUT"
+            android:background="@drawable/stroke_logout"
+            ></TextView>
 
         <TextView
             android:id="@+id/group_btn_plan"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="PLAN"></TextView>
+            android:text="PLAN"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            ></TextView>
 
         <TextView
             android:id="@+id/group_btn_group"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
+            android:layout_marginStart="20dp"
             android:text="UNION"></TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:text="DIARY"></TextView>
-
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
