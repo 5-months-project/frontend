@@ -1,5 +1,6 @@
 package com.example.frontend.Calendar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
@@ -14,6 +15,8 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -22,8 +25,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.frontend.Group.Group;
@@ -47,6 +55,8 @@ public class Mainpage extends AppCompatActivity {
     public static ConstraintLayout[] viewgroup = new ConstraintLayout[6];
     public static int[] inttmp  = new int[2];
     public static String[] date;
+    public static String[] dialogdate = new String[2];
+    public static String schedule;
     Animation to_left_animation;
     Animation to_right_animation;
     Animation largecal_to_bottom_animation;
@@ -229,6 +239,14 @@ public class Mainpage extends AppCompatActivity {
             Intent i = new Intent(Mainpage.this, Group.class);
             startActivity(i);
         });//페이지 넘기는 코드(to group)
+        TextView addschedule = findViewById(R.id.schedule_plus);
+        addschedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_addschedule();
+
+            }
+        });
 
 
 
@@ -360,6 +378,120 @@ public class Mainpage extends AppCompatActivity {
             dialog_calendar(t, Integer.parseInt((String) dt[t].getText()),Integer.parseInt(date[1]));//dt에는 cal_txt가 들어가있고 여기엔 그날이 몇일인지 표시
         }
     };
+    public void dialog_addschedule()//일정 추가 클릭 시
+    {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.dialog_addschedule);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        final TextView btn_startdate = dialog.findViewById(R.id.btn_startdateselect);
+        final TextView btn_enddate = dialog.findViewById(R.id.btn_enddateselect);
+        final EditText getschedule = dialog.findViewById(R.id.dialog_schedule);
+        final ConstraintLayout frame = dialog.findViewById(R.id.layout_dialog_addschedule);
+        final Spinner spinner = dialog.findViewById(R.id.spinner_category);
+        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this, R.array.my_array, android.R.layout.simple_spinner_dropdown_item);
+        //R.array.test는 저희가 정의해놓은 1월~12월 / android.R.layout.simple_spinner_dropdown_item은 기본으로 제공해주는 형식입니다.
+        monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(monthAdapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            } //이 오버라이드 메소드에서 position은 몇번째 값이 클릭됬는지 알 수 있습니다.
+            //getItemAtPosition(position)를 통해서 해당 값을 받아올수있습니다.
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
+        });
+        params.width = dptopx(this,400);
+        params.height = dptopx(this,500);
+        dialog.getWindow().setAttributes(params);
+        dialog.show();
+        getschedule.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                schedule = getschedule.getText().toString();
+            }
+        });
+        btn_startdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_selectdatestart();
+            }
+        });
+        btn_enddate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_selectdateend();
+            }
+        });
+        frame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(dialogdate[0]!=null)
+                {
+                    btn_startdate.setText(dialogdate[0]);
+
+                }
+                if(dialogdate[1]!=null)btn_enddate.setText(dialogdate[1]);
+            }
+        });
+
+
+    }
+    public void dialog_selectdatestart()
+    {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.dialog_selectdate);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        params.width = dptopx(this,300);
+        params.height = dptopx(this,300);
+        final CalendarView cal = dialog.findViewById(R.id.dateselect);
+        dialog.getWindow().setAttributes(params);
+        dialog.show();
+        cal.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+               dialogdate[0] = year +"-"+month + "-" + dayOfMonth;
+               Log.d("agafsdgaf",dialogdate[0]);
+            }
+        });
+    }
+    public void dialog_selectdateend()
+    {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.dialog_selectdate);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        params.width = dptopx(this,300);
+        params.height = dptopx(this,300);
+        final CalendarView cal = dialog.findViewById(R.id.dateselect);
+        dialog.getWindow().setAttributes(params);
+        dialog.show();
+        cal.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                dialogdate[1] = year +"-"+month + "-" + dayOfMonth;
+                Log.d("agafsdgaf",dialogdate[1]);
+            }
+        });
+
+
+
+    }
     public void dialog_login()//로그인 다이얼로그
     {
         Dialog dialog = new Dialog(this);

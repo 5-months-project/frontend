@@ -11,9 +11,9 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="공다 아이콘"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gongda"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,13 +45,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.205" />
 
     <EditText
         android:id="@+id/dialog_create_pw"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="패스워드"
+        android:hint="패스 워드"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="그룹 코드 : abcdefghijk123456"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/dialog_create_create"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

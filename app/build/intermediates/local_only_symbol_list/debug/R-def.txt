@@ -6,6 +6,7 @@ anim anim_smallcal_to_bottom
 anim anim_smallcal_to_top
 anim anim_to_left
 anim anim_to_right
+array my_array
 color beige
 color black
 color brown
@@ -45,6 +46,7 @@ drawable rec_edge
 drawable round_edge
 drawable round_edge_dialog_calendar
 drawable round_edge_login
+drawable round_edge_schedule
 drawable settings
 drawable settings_right
 drawable stroke_logout
@@ -59,10 +61,12 @@ font opensans_regular
 id autologin_mode
 id bottomlayout
 id btn_create
+id btn_enddateselect
 id btn_login
 id btn_regis_account
 id btn_register
 id btn_side_menu
+id btn_startdateselect
 id cal_txt_1
 id cal_txt_10
 id cal_txt_11
@@ -157,6 +161,7 @@ id checkBox_autologin
 id checkBox_id
 id constraintLayout2
 id constraintLayout3
+id dateselect
 id dialog_cal_exit
 id dialog_checkbox_idsave
 id dialog_checkbox_keeplogin
@@ -171,6 +176,7 @@ id dialog_join_close
 id dialog_join_code
 id dialog_join_pw
 id dialog_pw
+id dialog_schedule
 id editText_id
 id editText_pw
 id editText_register_id
@@ -187,10 +193,12 @@ id largecal
 id largecal_month_body
 id largecal_month_head
 id largecal_year
+id layout_dialog_addschedule
 id layout_dialog_create
 id layout_dialog_join
 id layout_dialog_login
 id linearLayout
+id linearLayout2
 id main_frame
 id profile_btn_calendar
 id profile_btn_group
@@ -263,6 +271,7 @@ id progress_3_7_3
 id recyclerView_group
 id recyclerview_schedule
 id schedule_detail
+id schedule_plus
 id schedule_title
 id side_menu
 id smallcal
@@ -312,6 +321,8 @@ id smallcal_month_body
 id smallcal_month_head
 id smallcal_year
 id smallcallayout_6
+id spinner_category
+id textView
 id textView10
 id textView11
 id textView12
@@ -342,11 +353,13 @@ layout activity_login
 layout activity_main
 layout activity_mainpage
 layout activity_profile
+layout dialog_addschedule
 layout dialog_calendar
 layout dialog_calendar_create
 layout dialog_create
 layout dialog_join
 layout dialog_login
+layout dialog_selectdate
 layout formake
 layout item_calendar_viewpager
 layout item_group

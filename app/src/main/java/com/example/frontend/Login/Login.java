@@ -3,19 +3,15 @@ package com.example.frontend.Login;
 import static com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState.ANCHORED;
 import static com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState.COLLAPSED;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,17 +19,18 @@ import android.widget.Toast;
 import com.example.frontend.Calendar.Mainpage;
 import com.example.frontend.R;
 import com.example.frontend.RetrofitMananger.AuthenticateModel;
+import com.example.frontend.RetrofitMananger.AuthenticationInterceptor;
 import com.example.frontend.RetrofitMananger.RetrofitInstance;
-import com.example.frontend.RetrofitMananger.RetrofitService;
 import com.example.frontend.RetrofitMananger.TokenModel;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
-import org.w3c.dom.Text;
+import java.io.IOException;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import okhttp3.ResponseBody;
+import okhttp3.FormBody;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -79,8 +76,6 @@ public class Login extends AppCompatActivity {
                 call.enqueue(new Callback<SignupModel>() {
                     @Override
                     public void onResponse(Call<SignupModel> call, Response<SignupModel> response) {
-                        String result = response.body().toString();
-                        Log.d("TAGGGG","result is : "+result);
                         Toast.makeText(getApplicationContext(), "success!" , Toast.LENGTH_SHORT).show();
                     }
                     @Override
@@ -88,48 +83,6 @@ public class Login extends AppCompatActivity {
                         Log.d("fail",t.getMessage());
                     }
                 });
-            }
-        });
-        TextView tokenbtn = findViewById(R.id.tokenbtn);
-        tokenbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AuthenticateModel authenticateModel = new AuthenticateModel(
-                        id[0],
-                        pw[0]
-                );
-                Call<AuthenticateModel> call = RetrofitInstance.getApiService().gettoken(authenticateModel);
-                call.enqueue(new Callback<AuthenticateModel>() {
-                    @Override
-                    public void onResponse(Call<AuthenticateModel> call, Response<AuthenticateModel> response) {
-                        res_aut[0] = response.body();
-                        Log.d("Ttttttt","result is : "+res_aut[0].gettoken());
-                        Toast.makeText(getApplicationContext(), "success!" , Toast.LENGTH_SHORT).show();
-                    }
-                    @Override
-                    public void onFailure(Call<AuthenticateModel> call, Throwable t) {
-                        Log.d("fail",t.getMessage());
-                    }
-                });
-            }
-        });
-        TextView hello = findViewById(R.id.hello);
-        hello.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Call<TokenModel> call = RetrofitInstance.getApiService().hello(res_aut[0].gettoken());
-                call.enqueue(new Callback<TokenModel>() {
-                    @Override
-                    public void onResponse(Call<TokenModel> call, Response<TokenModel> response) {
-                        hel[0] = response.body();
-                        Log.d("이거 되나요?",hel[0].getresponse());
-                    }
-                    @Override
-                    public void onFailure(Call<TokenModel> call, Throwable t) {
-                    }
-                });
-
-
             }
         });
 
@@ -199,8 +152,51 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //로그인 버튼을 눌렀을 때 서버에서 회원정보를 조회하여 로그인 여부를 판단하여 페이지를 넘기면 된다.
-                Intent i = new Intent(Login.this , Mainpage.class);
-                startActivity(i);
+                AuthenticateModel authenticateModel = new AuthenticateModel(
+                        id[0],
+                        pw[0]
+                );
+                Call<AuthenticateModel> call = RetrofitInstance.getApiService().gettoken(authenticateModel);
+                call.enqueue(new Callback<AuthenticateModel>() {
+                    @Override
+                    public void onResponse(Call<AuthenticateModel> call, Response<AuthenticateModel> response) {
+                        res_aut[0] = response.body();
+                        Log.d("vvvvvvvvvvvv",""+response.code());
+                        if(response.code() == 200){
+                        HttpUrl.Builder urlBuilder = HttpUrl.parse("http://think2022.iptime.org:8080/api/hello").newBuilder();
+                        String url = urlBuilder.build().toString();
+
+                        // 요청 만들기
+                        OkHttpClient client = new OkHttpClient();
+                        Request request = new Request.Builder()
+                                .url(url)
+                                .addHeader("Authorization", "Bearer " + res_aut[0].gettoken())
+                                .build();
+                        client.newCall(request).enqueue(new okhttp3.Callback() {
+                            @Override
+                            public void onFailure(@NonNull okhttp3.Call call, @NonNull IOException e) {
+
+                            }
+
+                            @Override
+                            public void onResponse(@NonNull okhttp3.Call call, @NonNull okhttp3.Response response) throws IOException {
+                                final String res = String.valueOf(response);
+                                Log.d("ababababa", "\n" + response.toString());
+                                if (response.code() == 200) {
+                                    Intent i = new Intent(Login.this, Mainpage.class);
+                                    startActivity(i);
+                                }
+                            }
+                        });
+                        }
+                        else Toast.makeText(getApplicationContext(), "로그인 오류!" , Toast.LENGTH_SHORT).show();
+                    }
+                    @Override
+                    public void onFailure(Call<AuthenticateModel> call, Throwable t) {
+                        Log.d("fail",t.getMessage());
+                    }
+                });
+
             }
         });
         //회원가입 탭 여는 코드

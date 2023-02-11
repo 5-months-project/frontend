@@ -58,7 +58,7 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager_calendar"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:background="@color/beige"
         android:clickable="true"
         android:visibility="visible"
@@ -999,7 +999,7 @@
 
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/schedule_plus"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/brown"

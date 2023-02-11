@@ -7,6 +7,7 @@
     android:id="@+id/main_frame"
     tools:context=".Login.Login"
     android:gravity = "bottom"
+    android:background="@color/light_beige"
     app:umanoDragView="@id/bottomlayout"
     app:umanoOverlay="false"
     app:umanoPanelHeight="0dp"
@@ -20,22 +21,25 @@
             android:id="@+id/autologin_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:text=""
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="108dp"
-            android:text="Gongda"
+            android:background="@drawable/gongda"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/editText_id"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.172" />
+            app:layout_constraintVertical_bias="0.17" />
 
         <EditText
             android:id="@+id/editText_id"
@@ -64,28 +68,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.589" />
 
-        <TextView
-            android:id="@+id/tokenbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="토큰 발급"
-            app:layout_constraintBottom_toTopOf="@+id/btn_login"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox_autologin">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="hello"
-            app:layout_constraintBottom_toTopOf="@+id/btn_login"
-            app:layout_constraintEnd_toStartOf="@+id/tokenbtn"
-            app:layout_constraintStart_toStartOf="parent">
-
-        </TextView>
 
         <TextView
             android:id="@+id/btn_login"
@@ -94,46 +76,24 @@
             android:background="@drawable/round_edge"
             android:elevation="5dp"
             android:gravity="center"
-            android:text="login"
+            android:text="LOGIN"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_pw"
-            app:layout_constraintVertical_bias="0.447" />
+            app:layout_constraintVertical_bias="0.129" />
 
         <TextView
             android:id="@+id/btn_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="회원가입"
-            android:textColor="@color/purple_700"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toEndOf="@+id/checkBox_id"
+            android:textColor="@color/dark_brown"
+            app:layout_constraintEnd_toEndOf="@+id/editText_pw"
             app:layout_constraintTop_toBottomOf="@+id/editText_pw" />
 
-        <CheckBox
-            android:id="@+id/checkBox_id"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="아이디 기억"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_pw" />
-
-        <CheckBox
-            android:id="@+id/checkBox_autologin"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="64dp"
-            android:text="자동 로그인"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_pw" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout

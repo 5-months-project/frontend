@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
 
             }
-        }, 3000); //딜레이 타임 조절
+        }, 1500); //딜레이 타임 조절
 
 
         //깃허브 푸쉬 테스트!!!

@@ -1,11 +1,11 @@
 package com.example.frontend.RetrofitMananger;
 
-import com.example.frontend.Group.Group;
 import com.example.frontend.Group.GroupModel;
 import com.example.frontend.Login.SignupModel;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
@@ -20,8 +20,10 @@ public interface RetrofitService {
 
     @POST("authenticate")
     Call<AuthenticateModel> gettoken(@Body AuthenticateModel authenticateModel);
+
+
     @GET("hello")
-    Call<TokenModel> hello( String token);
+    Call<TokenModel> hello();
 
 
     @POST("groups")//그룹 생성
